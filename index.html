@@ -1,59 +1,72 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-us" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/style.css">
+    <script src='/assets/style.css' rel="stylesheet"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>AlexM</title>
 </head>
 
-<body>
-    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-    <nav class="navbar">
-        <img src="assets/1534067.png" alt="galaxy with stars" class="icon">
-        <ul>
-            <li><a href="#aboutme-container1">About Me</a></li>
-            <li><a href="#container2">Projects</a></li>
-            <li><a href="#contactme">Contact Me</a></li>
+<body class="bg-blue-300">
+    <nav class="w-full flex flex-row bg-blue-500 h-24 items-center sticky top-0 shadow-2xl lg:text-3xl md:text-xs z-20">
+        <!-- <img src="assets/1534067.png" alt="galaxy with stars" class="icon"> -->
+        <ul class="w-full flex flex-row font-bold text-white justify-center">
+            <li class="mx-8 underline decoration-4 underline-offset-8"><a href="#aboutme-container1">About Me</a></li>
+            <li class="mx-8 underline decoration-4 underline-offset-8"><a href="#container2">Projects</a></li>
+            <li class="mx-8 underline decoration-4 underline-offset-8"><a href="#contactme">Contact Me</a></li>
         </ul>
     </nav>
     
-    <header>
-        <div class="flexbox-container-1">
-            <h1>Hi, <br>My name is Alexander.<br>I'm a full stack dev.</h1>
+    <header class="w-full h-96 bg-gradient-to-r from from-blue-300 to-red-300 backdrop-blur" id="headerHeight">
+        <div class="flex w-full h-full">
+        </div>
+        <header class="w-full h-96 bg-gradient-to-r from from-blue-300 to-red-300" id="headerHeight">
+        <div class="flex w-full justify-center items-center">
+            <h1 class="text-5xl text-white font-bold absolute">Hi, <br>I'm Alexander.<br>I'm a Full Stack Developer.</h1>
         </div>
     </header>
 
-    <section id="aboutme-container1">
-        <h2>About Me</h2>
-        <img src="assets/image0.jpeg" alt="a picture of me" class="me">
-        <p>I'm Alexander (or Alex for short), I am a learning developer looking to get my foot into the tech industry. I am a current
-        student in the Lonestar College system looking to major in Computer Science and am also enrolled in the University of Minnesota Bootcamp
-        as a means of gaining experience for my future career as a software engineer. I have ample experience with computers as I've worked with them for as long as I can remember. I chose Computer Science because
-        I love to create and make things work.  
-        </p>
+    <section class="container-lg bg-blue-300">
+        <h2 class="text-5xl text-white p-10 border-solid border-4 border-slate-50 font-bold mx-1 shadow-2xl" id="aboutme-container1">About Me</h2>
+        <div class="grid bg-slate-100 flex-row">
+            <img src="assets/image0.jpeg" alt="a picture of me" class="scale-50 rounded-full z-0 col-span-1">
+            <h1 class="col-span-2 col-start-2 py-24 font-semibold mr-3 lg:text-3xl">I'm Alexander (or Alex for short), I am a learning developer looking pursue a career as a software engineer. I am
+                a current
+                student in the Lonestar College system looking to major in Computer Science and am also enrolled in the
+                University of Minnesota Bootcamp
+                as a means of gaining experience for my future career as a software engineer. I have ample experience with
+                computers as I've worked with them for as long as I can remember. I chose Computer Science because I love to keep learning
+                new topics and programming is constantly changing. 
+            </h1>
+        </div>
     </section>
 
-    <section id="container2">
-            <h2>Projects</h2>
-                <a href="https://cryptic-mountain-03281.herokuapp.com/" class="link">
-                    <button class="mainproject">Dog Rescue Administrator Portal</button>
-                </a>
-                    <div class="side-projects">
-                        <a href="http://google.com">
-                            <button class="projectbutt">Pixel Art </button>
-                        </a>
-                        <button class="projectbutt">Reminder App</button>
-                        <button class="projectbutt">Social Media Mockup</button>
-                        <button class="projectbutt">Food Recipes</button>
-                    </div>
-                </div>
+    <section>
+        <h2 class="text-5xl text-white p-10 border-solid border-4 border-slate-50 font-bold mx-1 shadow-2xl"
+            id="container2">Projects</h2>
+        <div class="grid grid-cols-10 grid-rows-2 h-96 w-full m-3 gap-5">
+            <a class="row-span-2 col-span-3 col-start-2 text-3xl border-2 border-slate-50 shadow-xl
+            font-bold bg-[url('https://media.istockphoto.com/id/983625496/vector/golden-retriever-collie-mixed-breed-dog-hoping-to-be-adopted.jpg?s=612x612&w=0&k=20&c=89VDWnrJ_AKiMa0DiW9CQ_WnjEzVZ0tknBhSueYAoVs=')]" href="https://cryptic-mountain-03281.herokuapp.com/"
+                class="link">
+                <button>Dog Rescue Administrator Portal</button>
+            </a>
+            <button class="projectbutt col-start-5 col-span-2 m-2 text-3xl font-bold border-2 border-slate-50 shadow-xl
+            bg-cover bg-[url('./assets/etchsketch4.png')]">Pixel Art</button>
+            <button class="projectbutt col-start-5 col-span-2 m-2  text-3xl font-bold border-2 border-slate-50 shadow-xl
+            bg-cover bg-[url('./assets/Weather.png')]">Weather App</button>
+            <button class="projectbutt col-start-7 col-span-2 m-2  text-3xl font-bold border-2 border-slate-50 shadow-xl
+            bg-cover bg-[url('./assets/techblog.png')]">Tech Blog</button>
+            <button class="projectbutt row-start-1 col-start-7 m-2 col-span-2 font-bold text-2xl text-white shadow-xl border-2 border-slate-50
+            bg-cover bg-[url('./assets/marvelgenerator.png')]">Marvel Quote Generator</button>
+        </div>
     </section>
-    <section id="contactme">
-        <h2>Contact Me</h2>
+    <section id="contactme h-96">
+        <h2 class="text-5xl text-white p-10 border-solid border-4 border-slate-50 font-bold mx-1 shadow-2xl">Contact Me</h2>
     </section>
 
     <script src="assets/script.js"></script>
